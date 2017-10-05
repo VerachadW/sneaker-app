@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/space_m"
+    android:layout_marginRight="@dimen/space_m"
+    android:layout_marginTop="@dimen/space_m"
+    android:foreground="?attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_l">
+
+        <ImageView
+            android:id="@+id/ivItemSneakerImage"
+            android:layout_width="@dimen/item_sneaker_image_size"
+            android:layout_height="@dimen/item_sneaker_image_size"
+            tools:src="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/tvItemSneakerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_m"
+            android:layout_toRightOf="@id/ivItemSneakerImage"
+            android:textStyle="bold"
+            tools:text="Nike Air MAx" />
+
+        <TextView
+            android:id="@+id/tvItemSneakerCollection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tvItemSneakerName"
+            android:layout_below="@id/tvItemSneakerName"
+            android:layout_marginTop="@dimen/space_m"
+            tools:text="Air Max" />
+
+        <TextView
+            android:id="@+id/tvItemSneakerCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tvItemSneakerCollection"
+            android:layout_below="@id/tvItemSneakerCollection"
+            android:layout_marginTop="@dimen/space_m"
+            tools:text="Life Style" />
+
+        <TextView
+            android:id="@+id/tvItemSneakerPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            tools:text="$ 100" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SneakerShop</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_sneaker">SneakerActivity</string>
+</resources>

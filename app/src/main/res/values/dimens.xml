@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="space_s">4dp</dimen>
+    <dimen name="space_m">8dp</dimen>
+    <dimen name="space_l">12dp</dimen>
+    <dimen name="space_xl">16dp</dimen>
+    <dimen name="space_xxl">20dp</dimen>
+    <dimen name="item_sneaker_image_size">80dp</dimen>
+</resources>

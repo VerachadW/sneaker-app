@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <FrameLayout
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/srlSneakerDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivSneakerDetailImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        tools:src="@drawable/ic_sort_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/tvSneakerDetailName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/space_m"
+                        android:textStyle="bold"
+                        tools:text="Nike Airmax" />
+
+                    <TextView
+                        android:id="@+id/tvSneakerDetailCategoryName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/space_m"
+                        tools:text="Category" />
+
+                    <TextView
+                        android:id="@+id/tvSneakerDetailCollectiomName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/space_m"
+                        tools:text="Collection" />
+
+                    <TextView
+                        android:id="@+id/tvSneakerDetailPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/space_m"
+                        tools:text="$100" />
+
+                    <TextView
+                        android:id="@+id/tvSneakerDetailDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/space_m"
+                        tools:text="descr descr descr descr descr descr descr descr descr descr descr descr" />
+                </LinearLayout>
+            </ScrollView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </FrameLayout>
+
+
+    <ProgressBar
+        android:id="@+id/loadingView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+
+    <TextView
+        android:id="@+id/errorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        tools:text="Error" />
+
+</FrameLayout>
