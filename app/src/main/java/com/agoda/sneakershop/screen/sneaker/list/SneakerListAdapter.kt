@@ -6,11 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import butterknife.BindView
-import butterknife.ButterKnife
 import com.agoda.sneakershop.R
 import com.agoda.sneakershop.common.extension.format
 import com.agoda.sneakershop.common.extension.setImageUrl
+import kotlinx.android.synthetic.main.item_sneaker.view.*
 import kotlin.properties.Delegates
 
 typealias OnItemClick<T> = (T) -> Unit
@@ -38,15 +37,11 @@ class SneakerListAdapter : RecyclerView.Adapter<SneakerListViewHolder>() {
 
 class SneakerListViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-    @BindView(R.id.tvItemSneakerName) lateinit var tvItemSneakerName: TextView
-    @BindView(R.id.ivItemSneakerImage) lateinit var ivItemSneakerImage: ImageView
-    @BindView(R.id.tvItemSneakerCategory) lateinit var tvItemSneakerCategory: TextView
-    @BindView(R.id.tvItemSneakerCollection) lateinit var tvItemSneakerCollection: TextView
-    @BindView(R.id.tvItemSneakerPrice) lateinit var tvItemSneakerPrice: TextView
-
-    init {
-        ButterKnife.bind(this, itemView)
-    }
+    val tvItemSneakerName: TextView = itemView.tvItemSneakerName
+    val ivItemSneakerImage: ImageView = itemView.ivItemSneakerImage
+    val tvItemSneakerCategory: TextView = itemView.tvItemSneakerCategory
+    val tvItemSneakerCollection: TextView = itemView.tvItemSneakerCollection
+    val tvItemSneakerPrice: TextView = itemView.tvItemSneakerPrice
 
     fun bind(viewModel: SneakerListItemViewModel, onItemClick: OnItemClick<SneakerListItemViewModel>? = null) {
         viewModel.run {
