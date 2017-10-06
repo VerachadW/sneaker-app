@@ -15,12 +15,10 @@ class SneakerListFragment : BaseLceFragment<SneakerListViewModel, SneakerListVie
 
     @Inject
     lateinit var injectedPresenter: SneakerListPresenter
-
-
+    
     val sneakerListAdapter = SneakerListAdapter()
-
-    override val layoutId: Int
-        get() = R.layout.fragment_sneaker_list
+    
+    override val layoutId: Int = R.layout.fragment_sneaker_list
 
     interface Listener {
         fun openSneakerDetail(sneakerId: Long)
@@ -44,18 +42,12 @@ class SneakerListFragment : BaseLceFragment<SneakerListViewModel, SneakerListVie
         srlSneakerList.setOnRefreshListener { loadData(true) }
     }
 
-    override fun createViewState(): LceViewState<SneakerListViewModel, SneakerListView> {
-        return ParcelerDataLceViewState()
-    }
-
-    override fun getData(): SneakerListViewModel {
-        return presenter.viewModel
-    }
-
-    override fun createPresenter(): SneakerListPresenter {
-        return injectedPresenter
-    }
-
+    override fun createViewState(): LceViewState<SneakerListViewModel, SneakerListView> = ParcelerDataLceViewState()
+    
+    override fun getData(): SneakerListViewModel = presenter.viewModel
+    
+    override fun createPresenter(): SneakerListPresenter = injectedPresenter
+    
     override fun setData(data: SneakerListViewModel) {
         srlSneakerList.isRefreshing = false
         sneakerListAdapter.items = data.items
