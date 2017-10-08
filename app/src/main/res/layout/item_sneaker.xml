@@ -26,7 +26,7 @@
             android:layout_marginLeft="@dimen/space_m"
             android:layout_toRightOf="@id/ivItemSneakerImage"
             android:textStyle="bold"
-            tools:text="Nike Air MAx" />
+            tools:text="Nike Air MAx 1 Ultra essential 2.0 xxx" />
 
         <TextView
             android:id="@+id/tvItemSneakerCollection"
@@ -50,6 +50,7 @@
             android:id="@+id/tvItemSneakerPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tvItemSneakerCategory"
             android:layout_alignParentRight="true"
             tools:text="$ 100" />
     </RelativeLayout>

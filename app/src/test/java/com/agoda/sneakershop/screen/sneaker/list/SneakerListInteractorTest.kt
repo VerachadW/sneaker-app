@@ -35,7 +35,9 @@ class SneakerListInteractorTest {
     fun loadSneakers() {
         //#region Arrange
         val sneakers = listOf(SneakerEntity())
-        val viewModel = SneakerListViewModel(listOf(SneakerListItemViewModel()))
+        val viewModel = SneakerListViewModel(listOf(SneakerListItemViewModel(
+                0L, "", "", "", 0.0, ""
+        )))
         When calling sneakerRepository.observeSneakers() itReturns Single.just(sneakers)
         whenever(viewModelMapper.map(sneakers)).thenReturn(viewModel)
         //#endregion
