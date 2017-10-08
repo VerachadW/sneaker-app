@@ -19,11 +19,16 @@ class SneakerDetailTest {
 
     @Test
     fun testFirstItemDetail() {
-        //TODO: Check the first Item Name and Category
-    }
+        KView(R.id.rvSneakerList) perform {
+            clicOnItem(0)
+        }
 
-    @Test
-    fun testLastItemDetail() {
-        //TODO: Check the last Item Name and Category
+        KView(R.id.tvSneakerDetailName) check {
+            hasText("Nike SF Air Force 1 Mid")
+        }
+
+        KView(R.id.tvSneakerDetailCollectiomName) check {
+            hasText("Air Force 1")
+        }
     }
 }
